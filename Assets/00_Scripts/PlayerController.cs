@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     Animator anim;
     CharacterController cc;
+    public GameObject hitbox;
 
     float walkSpeed = 3f;
     float runSpeed = 6f;
@@ -28,6 +29,8 @@ public class PlayerController : MonoBehaviour
         hashMoveY = Animator.StringToHash("MoveY");
         hashJump = Animator.StringToHash("Jump");
         hashAttack = Animator.StringToHash("Attack");
+
+        if (hitbox == null) hitbox = GameObject.Find("Hitbox");
 
     }
 
@@ -94,5 +97,6 @@ public class PlayerController : MonoBehaviour
     {
         print("공격");
         anim.SetTrigger(hashAttack);
+        hitbox.SetActive(true);
     }
 }

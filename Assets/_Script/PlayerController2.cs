@@ -26,16 +26,16 @@ public class PlayerController2 : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.OnMove += HandleMove;
+        //InputManager.OnMove += HandleMove;
         InputManager.OnJump += HandleJump;
-        InputManager.OnSprint += HandleSprint;
+        //InputManager.OnSprint += HandleSprint;
         InputManager.OnAttack += HandleAttack;
     }
     private void OnDisable()
     {
-        InputManager.OnMove -= HandleMove;
+        //InputManager.OnMove -= HandleMove;
         InputManager.OnJump -= HandleJump;
-        InputManager.OnSprint -= HandleSprint;
+        //InputManager.OnSprint -= HandleSprint;
         InputManager.OnAttack -= HandleAttack;
     }
 
